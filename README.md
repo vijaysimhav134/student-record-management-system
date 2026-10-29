@@ -1,23 +1,25 @@
 # Student Record Management System
 
-A command-line application built with Python and SQLite to manage student records using basic database operations.
+A command-line application built using Python and SQLite to manage student records. The project demonstrates CRUD operations, input validation, database integration, and automated unit testing.
 
 ## Features
 
 - Add student records
-- View all students
+- View all student records
 - Search students by ID
 - Update student details
 - Delete student records
 - Validate user input
-- Persist records using SQLite
+- Store records persistently using SQLite
+- Automated unit tests for database operations
 
 ## Technologies Used
 
-- Python
+- Python 3
 - SQLite
 - SQL
-- VS Code
+- `unittest`
+- Git and GitHub
 
 ## Project Structure
 
@@ -25,34 +27,52 @@ A command-line application built with Python and SQLite to manage student record
 StudentRecordSystem/
 ├── main.py
 ├── database.py
-├── student.db
-└── README.md
+├── test_database.py
+├── README.md
+└── .gitignore
 ```
+
+The SQLite database file is created locally when the application runs and is excluded from the public repository.
 
 ## Requirements
 
-- Python 3
-- SQLite (included with Python's `sqlite3` module)
+- Python 3 installed
+- No additional Python packages required
 
-## How to Run
+## Run the Application
 
-1. Download or clone this repository.
-2. Open a terminal in the project directory.
-3. Run:
+Open a terminal in the project directory and run:
 
-   `python3 main.py`
+```bash
+python3 main.py
+```
 
-On Windows, `python main.py` may also work if Python is available through that command.
+On Windows, you can also use `python main.py` if that command is configured on your system.
+
+## Run Automated Tests
+
+Execute:
+
+```bash
+python3 -m unittest -v test_database.py
+```
+
+The tests verify adding, viewing, searching, updating, and deleting student records using a temporary database.
 
 ## Database Operations
 
-The application supports CRUD operations:
+The application implements CRUD operations:
 
-- **Create:** Add a student
-- **Read:** View and search student records
-- **Update:** Modify existing student details
-- **Delete:** Remove student records
+- **Create:** Add a student record.
+- **Read:** View all records or search by student ID.
+- **Update:** Modify an existing student's details.
+- **Delete:** Remove a student record.
 
-## Learning Objectives
+## Learning Outcomes
 
-This project demonstrates Python functions, loops, conditional statements, exception handling, SQL queries, and Python–SQLite integration.
+- Writing reusable Python functions
+- Working with SQL queries and SQLite
+- Handling invalid user input
+- Separating application logic from database logic
+- Writing automated unit tests
+- Managing source code with GitHub
